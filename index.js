@@ -3,7 +3,7 @@ const color = require('colors');
 let min = Number(process.argv[2]);
 let max = Number(process.argv[3]);
 
-if (isNaN(min)||isNaN(max)){return console.log('Нужно ввести два числа')};
+if (isNaN(min)||isNaN(max)){return console.log(color.red('!!!Нужно ввести два числа!!!'))};
 
 if (min > max){
     [min,max] = [max,min];
@@ -39,4 +39,4 @@ for (let i = min; i <= max; i++) {
     }
 }
 
-if (counter == 0){console.log('В этом диапазоне нет простых чисел')};
+if (counter == 0){console.log(color.red('В этом диапазоне нет простых чисел'))};
